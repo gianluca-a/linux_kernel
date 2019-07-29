@@ -2778,7 +2778,7 @@ gckOS_CreateMutex(
     gcmkONERROR(gckOS_Allocate(Os, gcmSIZEOF(struct mutex), Mutex));
 
     /* Initialize the mutex. */
-    mutex_init(*Mutex);
+    mutex_init((struct mutex*)*Mutex);
 
     /* Return status. */
     gcmkFOOTER_ARG("*Mutex=0x%X", *Mutex);
